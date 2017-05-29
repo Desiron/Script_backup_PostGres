@@ -1,0 +1,10 @@
+#!/bin/bash
+
+export PGPASSWORD = "desiron"
+
+pg_dump -U postgres -h localhost -O -o  -b -F c cadastroidadenome > BD_CadastroIdadeNome.backup
+
+pg_restore -U postgres -h localhost -d cadastroidadenome BD_CadastroIdadeNome.backup
+
+
+
